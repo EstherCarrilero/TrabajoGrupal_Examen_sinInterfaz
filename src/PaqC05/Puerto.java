@@ -70,4 +70,19 @@ public class Puerto implements Serializable {
         }
         return null;
     }
+
+    public String toneladas(int peso, int numHub){
+        if(numHub == 1){
+            return P[0].toneladas_hub(peso);
+        }
+        else if(numHub == 2){
+            return P[1].toneladas_hub(peso);
+        }
+        else if(numHub == 3){
+            return P[2].toneladas_hub(peso);
+        }
+        else{
+            return "No ha habido ningún cambio";
+        }
+    }
 }

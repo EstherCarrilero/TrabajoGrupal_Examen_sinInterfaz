@@ -107,5 +107,20 @@ public class Hub implements Serializable {
         }
         return total;
     }
+
+    public String toneladas_hub(int peso){
+        String cadena = "-Contenedores modificados-\n";
+        for(int i = 0; i < M.length; i++){
+            for(int j = 0; j < M[0].length; j++){
+                if(M[i][j] != null){
+                    if(M[i][j].getPeso() >= peso){
+                        M[i][j].setInspeccionado(true);
+                        cadena = cadena + "Contenedor " + M[i][j].getId() + "\n" + "Empresa remitente: " + M[i][j].getEmpresaRemitente() + "\n" + "Peso: " + M[i][j].getPeso() + "\n" + "Estado de chequeo: " + M[i][j].getInspeccionado() + "\n\n";
+                    }
+                }
+            }
+        }
+        return cadena;
+    }
 }
 

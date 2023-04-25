@@ -57,6 +57,9 @@ public class Main {
         System.out.println("Introduce el id del contenedor que desees");
         int numID2 = sc.nextInt();
         System.out.println(hub1.mostrarDatos(numID2));
+
+        //PRUEBA DE EXAMEN
+        System.out.println(puerto1.toneladas(80, 1));
     }
 }
 
